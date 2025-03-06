@@ -16,6 +16,11 @@ using namespace std;
  */
 Node* readList(const char* filename);
 
+struct Comparer {
+  Comparer() {}  // Constructor
+  int operator()(int y) const { return (y%2); }
+
+};
 /**
  * Prints the integers in a linked list pointed to
  * by head.
@@ -86,9 +91,12 @@ int main(int argc, char* argv[])
     print(head);
 
     // Test out your linked list code
-
-
-
+    Comparer comp_ = Comparer();
+    //Node* sm = nullptr;
+    //Node* lg = nullptr;
+    //llpivot(head, sm, lg, 11);
+    print(sm);
+    //print(lg);
     
     return 0;
 
